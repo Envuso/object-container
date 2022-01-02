@@ -1,0 +1,41 @@
+{
+  "name": "@envuso/object-container",
+  "version": "0.0.0",
+  "author": {
+    "name": "iDevelopThings",
+    "email": "sam@idevelopthings.com",
+    "url": "https://github.com/idevelopthings"
+  },
+  "repository": {
+    "url": "https://github.com/envuso/object-container",
+    "type": "git"
+  },
+  "license": "MIT",
+  "description": "Envuso's object 'container'. This is a typesafe store which we can put an object into and have access to some nice methods.",
+  "typings": "./dist/types/index.d.ts",
+  "main": "./dist/node/index.js",
+  "module": "./dist/web/index.js",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "serve-dev": "ts-node-dev test-build/index.ts",
+    "build": "./build.sh",
+    "dist": "./dist.sh"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "jest": "^27.3.1",
+    "ts-jest": "^27.0.7",
+    "ts-node-dev": "^1.1.8",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "@types/node": "^16.11.7"
+  }
+}

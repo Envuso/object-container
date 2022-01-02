@@ -1,6 +1,6 @@
 
 echo "› Building..."
-yarn build:dist
+tsc
 
 echo "› What did you change in this update?"
 read commitMessage
@@ -19,12 +19,6 @@ git commit -m ":package: $commitMessage"
 git push origin next
 
 echo "› Committed and pushed changes"
-
-cp package.json dist/package.json
-
-echo "› Copied package.json & ecli to /dist"
-
-cd dist || exit
 
 npm publish --access=public
 

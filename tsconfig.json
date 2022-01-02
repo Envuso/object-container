@@ -17,6 +17,8 @@
     "experimentalDecorators": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
+    "declarationDir": "dist",
+    "outDir": "dist",
     "baseUrl": ".",
     "allowJs": true,
     "checkJs": true,
@@ -24,7 +26,7 @@
       "node_modules/@types"
     ],
     "useDefineForClassFields": true,
-    "declaration": false,
+    "declaration": true,
     "emitDeclarationOnly": false
   },
   "include": [

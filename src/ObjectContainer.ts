@@ -228,6 +228,14 @@ export class ObjectContainer<T> {
 		return Object.values(this.data) as T[];
 	}
 
+	/**
+	 * Do we have any items?
+	 * @returns {boolean}
+	 */
+	public empty(): boolean {
+		return !this.keys()?.length;
+	}
+
 	public convertKey(key: string) {
 		if (this.config.convertAllKeysToLowerCase) {
 			key = key.toLowerCase();

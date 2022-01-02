@@ -1,4 +1,3 @@
-export type ObjectContainerObject<T> = { [key: string]: T };
 export type ObjectContainerConfiguration = {
 	convertAllKeysToLowerCase: boolean,
 	convertAllValuesToLowerCase: boolean,
@@ -6,14 +5,14 @@ export type ObjectContainerConfiguration = {
 
 export class ObjectContainer<T> {
 
-	public data: ObjectContainerObject<T> = {};
+	public data: T | any = {};
 
 	public config: ObjectContainerConfiguration = {
 		convertAllKeysToLowerCase   : false,
 		convertAllValuesToLowerCase : false,
 	};
 
-	constructor(data?: { [key: string]: T }, configuration?: ObjectContainerConfiguration) {
+	constructor(data?: T, configuration?: ObjectContainerConfiguration) {
 		this.data = data ?? {};
 
 		if (configuration) {
@@ -193,9 +192,9 @@ export class ObjectContainer<T> {
 	 * Get all items from the container
 	 *
 	 * @template T
-	 * @return {ObjectContainerObject<T>}
+	 * @return {T}
 	 */
-	public items(): ObjectContainerObject<T> {
+	public items(): T {
 		return this.data;
 	}
 
@@ -203,9 +202,9 @@ export class ObjectContainer<T> {
 	 * Same as {@link items}, just feels more convenient to use
 	 *
 	 * @template T
-	 * @return {ObjectContainerObject<T>}
+	 * @return {T}
 	 */
-	public all(): ObjectContainerObject<T> {
+	public all(): T {
 		return this.items();
 	}
 

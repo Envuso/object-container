@@ -13,6 +13,7 @@
   "license": "MIT",
   "description": "Envuso's object 'container'. This is a typesafe store which we can put an object into and have access to some nice methods.",
   "types": "dist/index.d.ts",
+  "main": "dist/index.js",
   "files": [
     "dist"
   ],

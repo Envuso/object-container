@@ -76,7 +76,7 @@ export class ObjectContainer<T> {
 	 * @param {T|undefined} value
 	 * @return {boolean}
 	 */
-	public has(key: string, value: T): boolean;
+	public has(key: string, value: T | any): boolean;
 
 	/**
 	 * Do we have the key in the object?
@@ -87,9 +87,9 @@ export class ObjectContainer<T> {
 	 * @param {T|undefined} value
 	 * @return {boolean}
 	 */
-	public has(key: string, value?: T): boolean {
+	public has(key: string, value?: T | any): boolean {
 		key   = this.convertKey(key);
-		value = this.convertValue(value) as T;
+		value = this.convertValue(value) as T | any;
 
 		if (value !== undefined) {
 			if (this.data[key] === undefined) {
